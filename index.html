@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extremely Unsecure QR Code Scanner</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!--JSQrCode library-->
+    <script type="text/javascript" src="jsqrcode/grid.js"></script>
+    <script type="text/javascript" src="jsqrcode/version.js"></script>
+    <script type="text/javascript" src="jsqrcode/detector.js"></script>
+    <script type="text/javascript" src="jsqrcode/formatinf.js"></script>
+    <script type="text/javascript" src="jsqrcode/errorlevel.js"></script>
+    <script type="text/javascript" src="jsqrcode/bitmat.js"></script>
+    <script type="text/javascript" src="jsqrcode/datablock.js"></script>
+    <script type="text/javascript" src="jsqrcode/bmparser.js"></script>
+    <script type="text/javascript" src="jsqrcode/datamask.js"></script>
+    <script type="text/javascript" src="jsqrcode/rsdecoder.js"></script>
+    <script type="text/javascript" src="jsqrcode/gf256poly.js"></script>
+    <script type="text/javascript" src="jsqrcode/gf256.js"></script>
+    <script type="text/javascript" src="jsqrcode/decoder.js"></script>
+    <script type="text/javascript" src="jsqrcode/qrcode.js"></script>
+    <script type="text/javascript" src="jsqrcode/findpat.js"></script>
+    <script type="text/javascript" src="jsqrcode/alignpat.js"></script>
+    <script type="text/javascript" src="jsqrcode/databr.js"></script>
+
+</head>
+
+
+<body>
+
+<div id= "heading">
+    <div id="header-banner"><p style="margin-top: 25; font-size: 40">QR Code Scanner</p></div>
+    <p id ="subtitle">Aim the camera at a QR code to begin scanning.</p>
+</div>
+
+
+
+<div id="camera-container">
+    <video id="camera-window" autoplay></video>
+</div>
+
+<div id="canvas-container">
+    <canvas id="qr-canvas"></canvas>
+</div>
+
+<div id="video-container">
+    <video id="video-window" autoplay loop></video>
+</div>
+
+
+<button id= "scan-button" onclick="startScan()"> Scan Another Code</button>
+
+
+<div id= "scan-result">
+    <p id= "qr-text-label">QR code text: </p>
+    <!-- the result gets put in this tag if it is not preceded by "http:// or https:// or www."-->
+    <p id= "qr-text"></p>
+    <!-- the result gets put in here if it is preceded by http://, https:// or www.-->
+    <a id= "qr-link"></a><br>
+
+</div>
+
+
+
+
+<script src="https://kwagu14.github.io/script.js" type="text/javascript"></script>
+
+</body>
+</html>
