@@ -20,8 +20,8 @@ const recording = document.getElementById('video-window');
 const constraints = {
     video: {
         facingMode: {exact: "environment"}, 
-        width: {exact: 500}, 
-        height: {exact: 380}
+        width: {exact: 300}, 
+        height: {exact: 300}
 
     }
 };
