@@ -300,6 +300,7 @@ function tick(){
                 paragraphElement.innerHTML = result;
                 paragraphElement.style.visibility = 'visible';
             }
+            document.body.style.background = '#202029';
             changeHTML();
             return;
       
