@@ -288,7 +288,6 @@ function tick(){
             cameraView.pause();                                                    //<------- developer stops the camera after scanning
             cameraView.src = '';
             cameraView.srcObject.getVideoTracks().forEach(track => track.stop());
-            changeHTML();
             var prefix = result.substring(0, 4); //get first four characters of the scan result
             if(prefix == 'http' || prefix == 'www.'){
                 //web link result
@@ -301,6 +300,7 @@ function tick(){
                 paragraphElement.innerHTML = result;
                 paragraphElement.style.visibility = 'visible';
             }
+            changeHTML();
             return;
       
           } catch(e){
