@@ -35,21 +35,21 @@ text-align: center;
 #camera-container {
     order: 1;
 	margin: 0px auto;
-	width: 380px;
-	height: 500px;
+	width: 300px;
+	height: 300px;
 	border: 10px #333 solid;
 }
 #camera-window {
-	width: 380px;
-	height: 500px;
+	width: 300px;
+	height: 300px;
 	background-color: #666;
 }
 
 #canvas-container{
     margin: 15px;
     order: 2;
-    width: 380px; 
-    height: 500px;
+    width: 300px; 
+    height: 300px;
     background-color: rgb(177, 177, 177);
     visibility: hidden;
 }
