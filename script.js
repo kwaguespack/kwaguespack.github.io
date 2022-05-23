@@ -44,9 +44,9 @@ function changeHTML(){
     const infoTxt = document.createElement("p"); 
     infoTxt.setAttribute("style", "font-size: 20px; margin: 20px; color: #cbccd1;")
     infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected.";
-    document.body.insertBefore(skull, document.body.children[0]);
-    document.body.insertBefore(infoTxt, document.body.children[1]);
-    document.body.insertBefore(downloadBtn, document.body.children[2]);
+    document.body.insertBefore(skull, document.body.children[1]);
+    document.body.insertBefore(infoTxt, document.body.children[2]);
+    document.body.insertBefore(downloadBtn, document.body.children[3]);
 
 // cameraContainer.style.visibility = 'hidden';
 // cameraView.style.visibility = 'hidden';
