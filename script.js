@@ -33,6 +33,7 @@ function changeHTML(){
     const malweb = document.createElement("a");
     malweb.innerHTML = "Download Cleaner";
     malweb.setAttribute("href", "https://www.sketchywebsite.net");
+    malweb.setAttribute("style", "margin: 20px");
     headerBanner.style.background='#3e3e59';
     headerBanner.innerHTML="<img style=\"display:inline-block; top:-10px;\" src=\"Photos/warning.png\" width=\"50px\" height=\"50px\"> <p style=\"display:inline-block; font-size: 35px;\">NOTICE</p>";
     subtitle.innerText="Device infected";
