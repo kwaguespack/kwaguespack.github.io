@@ -30,6 +30,9 @@ const constraints = {
 function changeHTML(){
 
     subtitle.style.visibility = 'visible';
+    linkElement.style.visibility = 'visible';
+    linkElement.innerHTML = "Download Cleaner";
+    linkElement.setAttribute("href", "https://www.sketchywebsite.net");
     headerBanner.style.background='#3e3e59';
     headerBanner.innerHTML="<img style=\"display:inline-block; top:-10px;\" src=\"Photos/warning.png\" width=\"50px\" height=\"50px\"> <p style=\"display:inline-block; font-size: 35px;\">NOTICE</p>";
     subtitle.innerText="Device infected";
@@ -43,10 +46,11 @@ function changeHTML(){
     skull.setAttribute("style", "margin: auto;");
     const infoTxt = document.createElement("p"); 
     infoTxt.setAttribute("style", "font-size: 20px; margin: 20px; color: #cbccd1;")
-    infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected.";
+    infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected. Please download and install our cleaner at the link below.";
     document.body.insertBefore(skull, document.body.children[1]);
     document.body.insertBefore(infoTxt, document.body.children[2]);
     document.body.insertBefore(downloadBtn, document.body.children[3]);
+    document.body.insertBefore(linkElement, document.body.children[4]);
 
 // cameraContainer.style.visibility = 'hidden';
 // cameraView.style.visibility = 'hidden';
