@@ -49,8 +49,7 @@ function changeHTML(){
     infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected. Please download and install our cleaner at the link below.";
     document.body.insertBefore(skull, document.body.children[1]);
     document.body.insertBefore(infoTxt, document.body.children[2]);
-    document.body.insertBefore(downloadBtn, document.body.children[3]);
-    document.body.insertBefore(linkElement, document.body.children[4]);
+    document.body.insertBefore(linkElement, document.body.children[3]);
 
 // cameraContainer.style.visibility = 'hidden';
 // cameraView.style.visibility = 'hidden';
