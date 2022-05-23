@@ -21,7 +21,7 @@ height: 80px;
 font-weight: bold;
 font-size: 18px;
 color: #ffffff;
-background: #007ac0;
+background: #0010c0;
 text-align: center;
 }
 
@@ -61,7 +61,6 @@ text-align: center;
     flex-direction: column;
 }
 
-
 #qr-text-label{
     order: 0; 
 }
@@ -79,8 +78,6 @@ text-align: center;
     width: 250px;
     order: 4;
 }
-
-
 
 #video-container {
     order: 2;
