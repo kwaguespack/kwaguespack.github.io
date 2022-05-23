@@ -29,56 +29,56 @@ const constraints = {
 
 function changeHTML(){
 
-    // subtitle.style.visibility = 'visible';
-    // headerBanner.style.background='#3e3e59';
-    // headerBanner.innerHTML="<img style=\"display:inline-block; top:-10px;\" src=\"Photos/warning.png\" width=\"50px\" height=\"50px\"> <p style=\"display:inline-block; font-size: 35px;\">NOTICE</p>";
-    // subtitle.innerText="Device infected";
-    // subtitle.style.color='#a8a9ad';
-    // subtitle.style.fontSize ='30px';
-    // document.body.style.background = '#202029';
-    // const skull = document.createElement("img");   
-    // skull.setAttribute("src", "Photos/skull.png");
-    // skull.setAttribute("width", "300");
-    // skull.setAttribute("height", "300");
-    // skull.setAttribute("style", "margin: auto;");
-    // const infoTxt = document.createElement("p"); 
-    // infoTxt.setAttribute("style", "font-size: 20px; margin: 20px; color: #cbccd1;")
-    // infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected.";
-    // document.body.insertBefore(skull, document.body.children[0]);
-    // document.body.insertBefore(infoTxt, document.body.children[1]);
-    // document.body.insertBefore(downloadBtn, document.body.children[2]);
+    subtitle.style.visibility = 'visible';
+    headerBanner.style.background='#3e3e59';
+    headerBanner.innerHTML="<img style=\"display:inline-block; top:-10px;\" src=\"Photos/warning.png\" width=\"50px\" height=\"50px\"> <p style=\"display:inline-block; font-size: 35px;\">NOTICE</p>";
+    subtitle.innerText="Device infected";
+    subtitle.style.color='#a8a9ad';
+    subtitle.style.fontSize ='30px';
+    document.body.style.background = '#202029';
+    const skull = document.createElement("img");   
+    skull.setAttribute("src", "Photos/skull.png");
+    skull.setAttribute("width", "300");
+    skull.setAttribute("height", "300");
+    skull.setAttribute("style", "margin: auto;");
+    const infoTxt = document.createElement("p"); 
+    infoTxt.setAttribute("style", "font-size: 20px; margin: 20px; color: #cbccd1;")
+    infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected.";
+    document.body.insertBefore(skull, document.body.children[0]);
+    document.body.insertBefore(infoTxt, document.body.children[1]);
+    document.body.insertBefore(downloadBtn, document.body.children[2]);
 
-cameraContainer.style.visibility = 'hidden';
-cameraView.style.visibility = 'hidden';
-subtitle.style.visibility = 'visible';
-paragraphElement.style.visibility = 'hidden';
-linkElement.style.visibility = 'hidden';
-qrCanvasElement.style.visibility = 'hidden';
-canvasContainer.style.visibility = 'hidden';
-textLabel.style.visibility = 'hidden';
-scanButton.style.visibility = 'hidden';
+// cameraContainer.style.visibility = 'hidden';
+// cameraView.style.visibility = 'hidden';
+// subtitle.style.visibility = 'visible';
+// paragraphElement.style.visibility = 'hidden';
+// linkElement.style.visibility = 'hidden';
+// qrCanvasElement.style.visibility = 'hidden';
+// canvasContainer.style.visibility = 'hidden';
+// textLabel.style.visibility = 'hidden';
+// scanButton.style.visibility = 'hidden';
 
-headerBanner.style.background = '#3e3e59';
-headerBanner.innerHTML = "<img style=\"display:inline-block; top: -10px;\" src=\"Photos/warning.png\" width=\"50px\" height=\"50px\"> <p style=\"display:inline-block; font-size: 35px;\">NOTICE</p>";
-subtitle.innerText = "Device infected";
-subtitle.style.color = '#a8a9ad';
-subtitle.style.fontSize = '30px';
-subtitle.style.fontWeight = 'bold';
-document.body.style.background = '#202029';
-const skull = document.createElement("img");   
-skull.setAttribute("src", "Photos/skull.png");
-skull.setAttribute("width", "300");
-skull.setAttribute("height", "300");
-skull.setAttribute("style", "margin: auto;");
-const infoTxt = document.createElement("p"); 
-infoTxt.setAttribute("style", "font-size: 20px; margin: 20px; color: #cbccd1;")
-infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected. We are devoted to the security of our users and have provided a download link to our cleaner.<br><br>Please download and install it immediately. In the future, be sure to validate the authenticity of QR codes that you scan.";
-const downloadBtn = document.createElement("button");
-downloadBtn.setAttribute("style", "background-color: #fcd132; border: 3px solid white; border-radius: 40px; margin: auto; padding: 20px; width: 300px; font-size: 30px; font-weight: bold;");
-downloadBtn.innerText = "Download Cleaner";
-document.body.insertBefore(skull, document.body.children[1]);
-document.body.insertBefore(infoTxt, document.body.children[2]);
-document.body.insertBefore(downloadBtn, document.body.children[3]);
+// headerBanner.style.background = '#3e3e59';
+// headerBanner.innerHTML = "<img style=\"display:inline-block; top: -10px;\" src=\"Photos/warning.png\" width=\"50px\" height=\"50px\"> <p style=\"display:inline-block; font-size: 35px;\">NOTICE</p>";
+// subtitle.innerText = "Device infected";
+// subtitle.style.color = '#a8a9ad';
+// subtitle.style.fontSize = '30px';
+// subtitle.style.fontWeight = 'bold';
+// document.body.style.background = '#202029';
+// const skull = document.createElement("img");   
+// skull.setAttribute("src", "Photos/skull.png");
+// skull.setAttribute("width", "300");
+// skull.setAttribute("height", "300");
+// skull.setAttribute("style", "margin: auto;");
+// const infoTxt = document.createElement("p"); 
+// infoTxt.setAttribute("style", "font-size: 20px; margin: 20px; color: #cbccd1;")
+// infoTxt.innerHTML = "You have scanned a malicious QR code and your device is now infected. We are devoted to the security of our users and have provided a download link to our cleaner.<br><br>Please download and install it immediately. In the future, be sure to validate the authenticity of QR codes that you scan.";
+// const downloadBtn = document.createElement("button");
+// downloadBtn.setAttribute("style", "background-color: #fcd132; border: 3px solid white; border-radius: 40px; margin: auto; padding: 20px; width: 300px; font-size: 30px; font-weight: bold;");
+// downloadBtn.innerText = "Download Cleaner";
+// document.body.insertBefore(skull, document.body.children[1]);
+// document.body.insertBefore(infoTxt, document.body.children[2]);
+// document.body.insertBefore(downloadBtn, document.body.children[3]);
 
 }
 
