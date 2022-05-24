@@ -73,6 +73,7 @@ text-align: center;
 
 
 #scan-button{
+    margin-bottom: 20px;
     margin: 20px;
     padding: 5px;
     width: 250px;
