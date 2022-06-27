@@ -93,18 +93,18 @@ function changeHTML(){
 async function startCamera(){
     
     console.log("Trying to start camera...");
-    textLabel.style.visibility = 'hidden';
-    linkElement.style.visibility = 'hidden';
-    paragraphElement.style.visibility = 'hidden';
-    scanButton.style.visibility = 'hidden';
-    qrCanvasElement.visibility = 'hidden';
-    canvasContainer.visibility = 'hidden';
+    textLabel.style.display = 'none';
+    linkElement.style.display = 'none';
+    paragraphElement.style.display = 'none';
+    scanButton.style.display = 'none';
+    qrCanvasElement.display = 'none';
+    canvasContainer.display = 'none';
     //unhide the camera
-    cameraContainer.style.visibility = 'visible';
-    cameraView.style.visibility = 'visible';
-    subtitle.style.visibility = 'visible';
+    cameraContainer.style.display = 'block';
+    cameraView.style.display = 'block';
+    subtitle.style.display = 'block';
     //unhide warning messages
-    warningMessage.style.visibility = 'visible';
+    warningMessage.style.display = 'block';
     try{
         await navigator.mediaDevices.getUserMedia(constraints)
         .then(function(stream){
@@ -279,6 +279,7 @@ function tick(){
 
     let width;
     let height;
+    let scanned;
 
     if (cameraView.readyState === cameraView.HAVE_ENOUGH_DATA) {
 
@@ -290,12 +291,13 @@ function tick(){
         try {
             const result = qrcode.decode();
             console.log(result);
-            cameraContainer.style.visibility = 'hidden'; //hide container
-            cameraView.style.visibility = 'hidden'; //hide camera
-            warningMessage.style.visibility = 'hidden'; //hide the warning message
-            scanButton.style.visibility = 'visible'; //unhide scan button
-            textLabel.style.visibility = 'visible'; //unhide text label
-            subtitle.style.visibility = 'hidden';
+            scanned = true;
+            cameraContainer.style.display = 'none'; //hide container
+            cameraView.style.display = 'none'; //hide camera
+            warningMessage.style.display = 'none'; //hide the warning message
+            scanButton.style.display = 'block'; //unhide scan button
+            textLabel.style.display = 'block'; //unhide text label
+            subtitle.style.display = 'none';
             cameraView.pause();                                                    //<------- developer stops the camera after scanning
             cameraView.src = '';
             cameraView.srcObject.getVideoTracks().forEach(track => track.stop());
@@ -303,14 +305,13 @@ function tick(){
             var prefix = result.substring(0, 4); //get first four characters of the scan result
             if(prefix == 'http' || prefix == 'www.'){
                 //web link result
-                linkElement.style.visibility = 'visible';
+                linkElement.style.display = 'block';
                 linkElement.innerHTML = result; 
                 linkElement.href = linkElement.textContent;
             }else{
                 //text result
-                paragraphElement.style.visibility = 'visible';
+                paragraphElement.style.display = 'block';
                 paragraphElement.innerHTML = result;
-                paragraphElement.style.visibility = 'visible';
             }
             return;
       
@@ -321,7 +322,7 @@ function tick(){
     }
 
     //if no qr code was found, keep looking for one
-    if(cameraView.style.visibility !== 'invisible'){
+    if(!scanned){
         setTimeout(tick, 100);
     }
 
