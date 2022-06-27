@@ -82,18 +82,18 @@ text-align: center;
     margin-top: 200px;
 }
 #qr-text{
-    order: 1;
-    margin-bottom: 200px; 
+    order: 1; 
 }
 #qr-link{
+    display: block;
     order: 2;
-    margin-bottom: 200px;
 }
 
 #scan-button{
+    order: 3;
+    margin-top: 200px; 
     padding: 5px;
     width: 250px;
-    order: 3;
 }
 
 /* #video-container {
