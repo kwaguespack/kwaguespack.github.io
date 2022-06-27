@@ -10,6 +10,7 @@ const canvasContainer = document.getElementById('canvas-container');
 const subtitle = document.getElementById('subtitle');
 const headerBanner = document.getElementById('header-banner');
 const textLabel = document.getElementById('qr-text-label');
+const warningMessage = document.getElementById('warning-message')
 
 var cameraStopped = false;
 // const recording = document.getElementById('video-window');
@@ -92,6 +93,7 @@ function changeHTML(){
 async function startCamera(){
     
     console.log("Trying to start camera...");
+    textLabel.style.visibility = 'hidden';
     linkElement.style.visibility = 'hidden';
     paragraphElement.style.visibility = 'hidden';
     scanButton.style.visibility = 'hidden';
@@ -101,6 +103,8 @@ async function startCamera(){
     cameraContainer.style.visibility = 'visible';
     cameraView.style.visibility = 'visible';
     subtitle.style.visibility = 'visible';
+    //unhide warning messages
+    warningMessage.style.visibility = 'visible';
     try{
         await navigator.mediaDevices.getUserMedia(constraints)
         .then(function(stream){
@@ -288,7 +292,9 @@ function tick(){
             console.log(result);
             cameraContainer.style.visibility = 'hidden'; //hide container
             cameraView.style.visibility = 'hidden'; //hide camera
-            scanButton.style.visibility = 'visible';
+            warningMessage.style.visibility = 'hidden'; //hide the warning message
+            scanButton.style.visibility = 'visible'; //unhide scan button
+            textLabel.style.visibility = 'visible'; //unhide text label
             subtitle.style.visibility = 'hidden';
             cameraView.pause();                                                    //<------- developer stops the camera after scanning
             cameraView.src = '';

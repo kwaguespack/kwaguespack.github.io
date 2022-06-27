@@ -55,7 +55,7 @@ text-align: center;
 }
 
 #warning-message{
-    order: 3;
+    order: 4;
     margin: 15px; 
     color: #a90a0a;
     text-align: left;
@@ -63,7 +63,7 @@ text-align: center;
 
 #canvas-container{
     margin: 15px;
-    order: 4;
+    order: 5;
     width: 380px; 
     height: 500px;
     background-color: rgb(177, 177, 177);
@@ -71,7 +71,7 @@ text-align: center;
 }
 
 #scan-result {
-    order: 4;
+    order: 3;
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ text-align: center;
     margin: 20px;
     padding: 5px;
     width: 250px;
-    order: 4;
+    order: 3;
 }
 
 /* #video-container {
