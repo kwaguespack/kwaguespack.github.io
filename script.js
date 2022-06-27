@@ -263,7 +263,7 @@ function recordPosition(){
 
 function startScan(){
     //hide the text label before a code is scanned
-    textLabel.style.visibility = 'hidden'; 
+    textLabel.style.display = 'none'; 
     startCamera();      
     setTimeout(tick, 100);
     // recordPosition();
