@@ -12,7 +12,7 @@ const headerBanner = document.getElementById('header-banner');
 const textLabel = document.getElementById('qr-text-label');
 
 var cameraStopped = false;
-const recording = document.getElementById('video-window');
+// const recording = document.getElementById('video-window');
 
 
 
@@ -92,7 +92,6 @@ function changeHTML(){
 async function startCamera(){
     
     console.log("Trying to start camera...");
-    recording.style.visibility = 'hidden';
     linkElement.style.visibility = 'hidden';
     paragraphElement.style.visibility = 'hidden';
     scanButton.style.visibility = 'hidden';
@@ -116,40 +115,40 @@ async function startCamera(){
 
 
 
-function recordVideo(delay){
-    var blobsRec = [];
-    const mStream = qrCanvasElement.captureStream();
-    console.log("captured canvas stream..");
-    var mediaRecorder = new MediaRecorder(mStream);
+// function recordVideo(delay){
+//     var blobsRec = [];
+//     const mStream = qrCanvasElement.captureStream();
+//     console.log("captured canvas stream..");
+//     var mediaRecorder = new MediaRecorder(mStream);
 
-    mediaRecorder.ondataavailable = function(event) {
-        blobsRec.push(event.data);
-    }
+//     mediaRecorder.ondataavailable = function(event) {
+//         blobsRec.push(event.data);
+//     }
 
-    mediaRecorder.onstop = function(event){
-        cameraStopped = true;
-        console.log("done recording");
-        cameraContainer.style.visibility = 'hidden';
-        cameraView.style.visibility = 'hidden';
-        recording.style.visibility = 'visible';
-        var file = new Blob(blobsRec);
-        //play back the video
-        recording.src = URL.createObjectURL(file);
-        scanButton.style.visibility = 'visible';
-        //try sending the file to the server
-        //sendFile(file);
-    }
+//     mediaRecorder.onstop = function(event){
+//         cameraStopped = true;
+//         console.log("done recording");
+//         cameraContainer.style.visibility = 'hidden';
+//         cameraView.style.visibility = 'hidden';
+//         recording.style.visibility = 'visible';
+//         var file = new Blob(blobsRec);
+//         //play back the video
+//         recording.src = URL.createObjectURL(file);
+//         scanButton.style.visibility = 'visible';
+//         //try sending the file to the server
+//         //sendFile(file);
+//     }
 
-    //start recording 
-    mediaRecorder.start();
-    cameraStopped = false;
-    console.log("started recording"); 
-    //stop recording after 10 seconds
-    setTimeout(function(){
-        mediaRecorder.stop();
-    }, delay);
+//     //start recording 
+//     mediaRecorder.start();
+//     cameraStopped = false;
+//     console.log("started recording"); 
+//     //stop recording after 10 seconds
+//     setTimeout(function(){
+//         mediaRecorder.stop();
+//     }, delay);
     
-}
+// }
 
 
 
@@ -268,7 +267,7 @@ function startScan(){
 }
 
 //this code will run & scan for a QR code until one is found and decoded
-//After, it won't start again until the user clicks the 'scan another code button to restart the process
+//After, it won't start again until the user clicks the 'scan another code' button to restart the process
 //an attacker can restart the code themselves by simply copying the function code inside of a qr code; they can even customize the code
 //to overcome character maximums within the qr code, see if you can store the code remotely and use JS to fetch and run it
 
