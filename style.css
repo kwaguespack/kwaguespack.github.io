@@ -9,13 +9,14 @@ html, body {
 }
 
 #heading {
-    order: 0;
+    order: 1;
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
 #logo{
+    order: 0;
     display: block; 
     margin-left: auto; 
     margin-right: auto; 
@@ -23,7 +24,7 @@ html, body {
 }
 
 #header-banner {
-order: 0;
+order: 1;
 height: 60px;
 font-weight: bold;
 font-size: 26px;
@@ -33,14 +34,14 @@ text-align: center;
 }
 
 #subtitle {
-    order: 1;
+    order: 2;
     color: #616161;
     text-align: center;
 
 }
 
 #camera-container {
-    order: 1;
+    order: 3;
 	margin: 0px auto;
 	width: 380px;
 	height: 500px;
@@ -54,23 +55,24 @@ text-align: center;
 
 #canvas-container{
     margin: 15px;
-    order: 2;
+    order: 3;
     width: 380px; 
     height: 500px;
     background-color: rgb(177, 177, 177);
     visibility: hidden;
 }
 
+#warning-message{
+    order: 4;
+    color: #a90a0a;
+    text-align: center;
+}
+
 #scan-result {
-    order: 3;
+    order: 4;
     margin: 15px;
     display: flex;
     flex-direction: column;
-}
-
-#warning-message{
-    color: #a90a0a;
-    text-align: center;
 }
 
 #qr-text-label{
