@@ -68,6 +68,11 @@ text-align: center;
     flex-direction: column;
 }
 
+#warning-message{
+    color: #a90a0a;
+    text-align: center;
+}
+
 #qr-text-label{
     order: 0; 
 }
@@ -78,7 +83,6 @@ text-align: center;
     order: 2
 }
 
-
 #scan-button{
     margin: 20px;
     padding: 5px;
@@ -86,7 +90,7 @@ text-align: center;
     order: 4;
 }
 
-#video-container {
+/* #video-container {
     order: 2;
     margin: 0px auto;
     width: 300px;
@@ -99,4 +103,4 @@ text-align: center;
     height: 300px;
     background-color: #666;
     visibility: hidden;
-}
+} */

@@ -30,10 +30,10 @@
 
 <body>
 
-<img id="logo" src="Photos/JUST_STC.jpg" alt="STC Logo" width="500">
+<img id="logo" src="Photos/JUST_STC.jpg" alt="STC Logo" width="300">
 
 <div id= "heading">
-    <div id="header-banner"><p style="margin-top: 25; font-size: 40">QR Code Scanner</p></div>
+    <div id="header-banner"><p style="margin-top: 25; font-size: 40">Demo QR Code Scanner</p></div>
     <p id ="subtitle">Aim the camera at a QR code to begin scanning.</p>
 </div>
 
@@ -47,9 +47,11 @@
     <canvas id="qr-canvas"></canvas>
 </div>
 
-<div id="video-container">
+<p id="warning-message">Warning: this scanner was made to demonstrate that JavaScript injection is possible with QR codes.<br>This scanner has vulnerabilities built inside. Please take caution.</p>
+
+<!-- <div id="video-container">
     <video id="video-window" autoplay loop></video>
-</div>
+</div> -->
 
 
 <button id= "scan-button" onclick="startScan()"> Scan Another Code</button>
