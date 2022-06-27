@@ -72,6 +72,7 @@ text-align: center;
 
 #scan-result {
     order: 3;
+    height: 500px; 
     margin: 15px;
     display: flex;
     flex-direction: column;
