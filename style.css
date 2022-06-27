@@ -53,19 +53,19 @@ text-align: center;
 	background-color: #666;
 }
 
+#warning-message{
+    order: 3;
+    color: #a90a0a;
+    text-align: left;
+}
+
 #canvas-container{
     margin: 15px;
-    order: 3;
+    order: 4;
     width: 380px; 
     height: 500px;
     background-color: rgb(177, 177, 177);
     visibility: hidden;
-}
-
-#warning-message{
-    order: 4;
-    color: #a90a0a;
-    text-align: center;
 }
 
 #scan-result {
