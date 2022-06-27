@@ -26,7 +26,7 @@ html, body {
 order: 0;
 height: 60px;
 font-weight: bold;
-font-size: 18px;
+font-size: 26px;
 color: #000000;
 background: #ffffff;
 text-align: center;
@@ -34,7 +34,7 @@ text-align: center;
 
 #subtitle {
     order: 1;
-    color: #404040;
+    color: #616161;
     text-align: center;
 
 }
