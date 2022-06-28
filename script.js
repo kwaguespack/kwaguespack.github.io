@@ -1,7 +1,7 @@
 //grab the elements from the html document so they can be easily manipulated
 const cameraView = document.getElementById('camera-window');
 const cameraContainer = document.getElementById('camera-container');
-const scanButton = document.getElementById('button-container');
+const scanButton = document.getElementById('scan-button');
 const qrCanvasElement = document.getElementById('qr-canvas');
 const paragraphElement = document.getElementById('qr-text');
 const linkElement = document.getElementById('qr-link');
