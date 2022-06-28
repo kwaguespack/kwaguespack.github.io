@@ -93,9 +93,12 @@ text-align: center;
     font-size: 18px;
 }
 
-#scan-button{
+#button-container{
     order: 3;
     margin: 20px;
+}
+
+#scan-button{
     padding: 5px;
     width: 250px;
 }
