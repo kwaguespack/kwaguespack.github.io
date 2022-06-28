@@ -76,7 +76,6 @@ text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
 #qr-text-label{
@@ -86,11 +85,11 @@ text-align: center;
     order: 1; 
 }
 #qr-link{
-    order: 2;
+    order: 1;
 }
 
-#scan-button{
-    order: 3;
+#button-container{
+    order: 2;
     padding: 5px;
     width: 250px;
 }
