@@ -10,7 +10,8 @@ const canvasContainer = document.getElementById('canvas-container');
 const subtitle = document.getElementById('subtitle');
 const headerBanner = document.getElementById('header-banner');
 const textLabel = document.getElementById('qr-text-label');
-const warningMessage = document.getElementById('warning-message')
+const warningMessage = document.getElementById('warning-message');
+const scanResult = document.getElementById("scan-result");
 
 var cameraStopped = false;
 // const recording = document.getElementById('video-window');
@@ -93,12 +94,11 @@ function changeHTML(){
 async function startCamera(){
     
     console.log("Trying to start camera...");
-    textLabel.style.display = 'none';
-    linkElement.style.display = 'none';
+    scanResult.style.display = 'none'; //hide the result
+    canvasContainer.display = 'none'; //hide the canvas
+    //decide which of these to display once the qr code has been scanned
     paragraphElement.style.display = 'none';
-    scanButton.style.display = 'none';
-    qrCanvasElement.display = 'none';
-    canvasContainer.display = 'none';
+    linkElement.style.display = 'none';
     //unhide the camera
     cameraContainer.style.display = 'block';
     cameraView.style.display = 'block';
@@ -292,11 +292,11 @@ function tick(){
             const result = qrcode.decode();
             console.log(result);
             scanned = true;
-            subtitle.style.display = 'none';
+            subtitle.style.display = 'none'; //hide subtitle
             cameraContainer.style.display = 'none'; //hide container
             cameraView.style.display = 'none'; //hide camera
             warningMessage.style.display = 'none'; //hide the warning message
-            textLabel.style.display = 'block'; //unhide text label
+            scanResult.style.display = 'block'; //unhide the result
             cameraView.pause();                                                    //<------- developer stops the camera after scanning
             cameraView.src = '';
             cameraView.srcObject.getVideoTracks().forEach(track => track.stop());
@@ -312,7 +312,6 @@ function tick(){
                 paragraphElement.style.display = 'block';
                 paragraphElement.innerHTML = result;
             }
-            scanButton.style.display = 'block'; //unhide scan button
             return;
       
           } catch(e){
