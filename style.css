@@ -71,11 +71,12 @@ text-align: center;
 }
 
 #scan-result {
+    height: 500px;
     order: 3; 
-    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 #qr-text-label{
