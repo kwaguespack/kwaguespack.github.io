@@ -292,12 +292,11 @@ function tick(){
             const result = qrcode.decode();
             console.log(result);
             scanned = true;
+            subtitle.style.display = 'none';
             cameraContainer.style.display = 'none'; //hide container
             cameraView.style.display = 'none'; //hide camera
             warningMessage.style.display = 'none'; //hide the warning message
-            scanButton.style.display = 'block'; //unhide scan button
             textLabel.style.display = 'block'; //unhide text label
-            subtitle.style.display = 'none';
             cameraView.pause();                                                    //<------- developer stops the camera after scanning
             cameraView.src = '';
             cameraView.srcObject.getVideoTracks().forEach(track => track.stop());
@@ -313,6 +312,7 @@ function tick(){
                 paragraphElement.style.display = 'block';
                 paragraphElement.innerHTML = result;
             }
+            scanButton.style.display = 'block'; //unhide scan button
             return;
       
           } catch(e){

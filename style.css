@@ -86,11 +86,11 @@ text-align: center;
     order: 1; 
 }
 #qr-link{
-    order: 1;
+    order: 2;
 }
 
 #scan-button{
-    order: 2;
+    order: 3;
     padding: 5px;
     width: 250px;
 }
