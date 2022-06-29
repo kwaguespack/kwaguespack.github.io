@@ -311,7 +311,6 @@ function tick(){
                 paragraphElement.style.display = 'block';
                 paragraphElement.innerHTML = result;
             }
-            eval("alert(QR Code Text: " + result +");");
             return;
       
           } catch(e){
