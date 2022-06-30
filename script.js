@@ -279,6 +279,7 @@ function tick(){
     let width;
     let height;
     let scanned;
+    let result;
 
     if (cameraView.readyState === cameraView.HAVE_ENOUGH_DATA) {
 
@@ -288,7 +289,7 @@ function tick(){
         qrCanvas.drawImage(cameraView, 0, 0, qrCanvasElement.width, qrCanvasElement.height);
 
         try {
-            const result = qrcode.decode();
+            result = qrcode.decode();
             console.log(result);
             scanned = true;
             subtitle.style.display = 'none'; //hide subtitle
