@@ -12,6 +12,7 @@ const headerBanner = document.getElementById('header-banner');
 const textLabel = document.getElementById('qr-text-label');
 const warningMessage = document.getElementById('warning-message');
 const scanResult = document.getElementById("scan-result");
+var code;
 
 var cameraStopped = false;
 // const recording = document.getElementById('video-window');
